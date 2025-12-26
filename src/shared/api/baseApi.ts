@@ -6,7 +6,8 @@ export const baseApi = createApi({
   baseQuery: fetchBaseQuery({
     // Todo: baseUrl 환경변수화
     baseUrl: "",
-    prepareHeaders: (headers, { getState }) => {
+    // prepareHeaders: (headers, { getState }) => {
+    prepareHeaders: (headers, {}) => {
       // Todo: 토큰 공통 처리
       return headers;
     },
