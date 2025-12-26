@@ -4,6 +4,7 @@ function App() {
   const { data, isLoading } = useGetProfileQuery();
 
   console.log("api 모킹 테스트:", data);
+  console.log("vercel build test");
 
   if (isLoading) return <div>로딩중</div>;
 
