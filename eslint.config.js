@@ -1,12 +1,14 @@
 import js from "@eslint/js";
 import globals from "globals";
+import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
+import tsParser from "@typescript-eslint/parser";
 import tseslint from "typescript-eslint";
 import { defineConfig, globalIgnores } from "eslint/config";
 
 export default defineConfig([
-  globalIgnores(["dist"]),
+  globalIgnores(["dist", "coverage", "public/mockServiceWorker.js", "**/*.config.*"]),
   {
     files: ["**/*.{ts,tsx}"],
     extends: [
@@ -25,9 +27,6 @@ export default defineConfig([
     },
     plugins: {
       react,
-      "react-hooks": reactHooks,
-      "react-refresh": reactRefresh,
-      "@typescript-eslint": tseslint,
     },
     rules: {
       // React 19
