@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./app/styles/global.css";
 import App from "./App";
-import { AppProviders } from "./app/providers";
+import { AppProviders } from "./app/providers/providers";
 
 async function start() {
   const { worker } = await import("./shared/api/mock/browser");
