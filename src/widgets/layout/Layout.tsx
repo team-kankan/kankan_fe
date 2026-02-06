@@ -8,8 +8,8 @@ export function Layout() {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      <main className="pt-14 flex-1">
-        <Container className="py-6">
+      <main className="pt-14 flex-1 flex">
+        <Container className="py-6 flex-1 ">
           <Outlet />
         </Container>
       </main>
