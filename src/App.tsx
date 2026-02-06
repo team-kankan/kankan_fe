@@ -1,8 +1,8 @@
 import { RouterProvider } from "react-router-dom";
 import { AppProviders } from "@/app/providers/providers";
 import { useGetProfileQuery } from "@/shared/api/userApi";
-import { Toaster } from "sonner";
 import router from "./app/providers/router";
+import ToasterWidget from "./widgets/ToasterWidget";
 
 export default function App() {
   const { data } = useGetProfileQuery();
@@ -11,7 +11,7 @@ export default function App() {
 
   return (
     <>
-      <Toaster position="top-center" />
+      <ToasterWidget />
       <AppProviders>
         <RouterProvider router={router} />
       </AppProviders>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSignInMutation } from "@/shared/api/authApi";
 import { ROUTES } from "@/shared/const/routes";
 
@@ -70,6 +70,14 @@ export default function LoginPage() {
             <Button type="submit" className="w-full" disabled={isLoading}>
               로그인
             </Button>
+            <div className="text-right">
+              <Link
+                to={ROUTES.AUTH.SIGN_UP}
+                className="text-sm text-muted-foreground underline underline-offset-4 hover:opacity-80"
+              >
+                아직 계정이 없나요? 회원가입
+              </Link>
+            </div>
           </form>
         </CardContent>
       </Card>
