@@ -10,6 +10,7 @@ const navItems = {
 
 export function HeaderNav() {
   const handleAlarm = async () => {
+    // Todo: 알림 기능 구현 예정
     toast.info("미구현 기능입니다.");
   };
 
