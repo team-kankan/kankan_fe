@@ -15,3 +15,10 @@ export type PostSignInRes = AuthTokens;
 
 export type PostKakaoOAuthReq = OAuthReq;
 export type PostKakaoOAuthRes = AuthTokens;
+
+export type PostSignUpReq = {
+  email: string;
+  password: string;
+  nickname: string;
+};
+export type PostSignUpRes = null;

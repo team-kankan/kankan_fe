@@ -6,6 +6,7 @@ import LoginPage from "@/pages/login/LoginPage";
 import { ROUTES } from "@/shared/const/routes";
 import GuestOnly from "@/shared/lib/router/guestOnly";
 import authLoader from "@/shared/lib/router/authLoader";
+import SignUpPage from "@/pages/signup/SignUpPage";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,14 @@ const router = createBrowserRouter([
         element: (
           <GuestOnly>
             <LoginPage />
+          </GuestOnly>
+        ),
+      },
+      {
+        path: ROUTES.AUTH.SIGN_UP,
+        element: (
+          <GuestOnly>
+            <SignUpPage />
           </GuestOnly>
         ),
       },
