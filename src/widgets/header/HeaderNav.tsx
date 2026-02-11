@@ -30,7 +30,7 @@ export function HeaderNav() {
         >
           KanKan
         </NavLink>
-        <span className="text-muted-foreground font-medium text-sm cursor-default">
+        <span className="hidden sm:inline text-muted-foreground font-medium text-sm cursor-default">
           자소서부터 면접까지, 칸칸이 쌓이는 나만의 취준 기록장
         </span>
       </div>

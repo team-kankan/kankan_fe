@@ -7,6 +7,8 @@ import { Input } from "@/shared/ui/input";
 import { Label } from "@/shared/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/shared/ui/card";
 import Button from "@/shared/ui/button";
+import KaKaoButton from "@/shared/ui/KakaoButton";
+import { toast } from "sonner";
 
 export default function LoginPage() {
   const navigate = useNavigate();
@@ -33,6 +35,10 @@ export default function LoginPage() {
     }
   };
 
+  const handleKakaoLogin = () => {
+    toast.info("카카오 로그인은 현재 지원되지 않습니다.");
+  };
+
   return (
     <div className="h-full flex items-center justify-center">
       <Card className="w-full max-w-sm">
@@ -47,7 +53,7 @@ export default function LoginPage() {
               <Input
                 id="email"
                 type="email"
-                placeholder="test@test.com"
+                placeholder="이메일을 입력하세요."
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -59,6 +65,7 @@ export default function LoginPage() {
               <Input
                 id="password"
                 type="password"
+                placeholder="비밀번호를 입력하세요."
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
@@ -67,9 +74,12 @@ export default function LoginPage() {
 
             <p className="text-sm text-destructive min-h-5">{errorMessage}</p>
 
-            <Button type="submit" className="w-full" disabled={isLoading}>
-              로그인
-            </Button>
+            <div className="flex flex-col gap-2">
+              <Button type="submit" className="w-full" disabled={isLoading}>
+                로그인
+              </Button>
+              <KaKaoButton onClick={handleKakaoLogin} isLoading={isLoading} />
+            </div>
             <div className="text-right">
               <Link
                 to={ROUTES.AUTH.SIGN_UP}

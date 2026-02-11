@@ -121,7 +121,7 @@ export default function SignUpPage() {
                 <Input
                   id="email"
                   type="email"
-                  placeholder="test@test.com"
+                  placeholder="이메일을 입력해주세요."
                   value={email}
                   onChange={(e) => handleChangeEmail(e.target.value)}
                   required
@@ -137,7 +137,7 @@ export default function SignUpPage() {
               <Label htmlFor="nickname">닉네임</Label>
               <Input
                 id="nickname"
-                placeholder="닉네임을 입력해주세요"
+                placeholder="닉네임을 입력해주세요."
                 value={nickname}
                 onChange={(e) => setNickname(e.target.value)}
                 required
@@ -152,6 +152,7 @@ export default function SignUpPage() {
                   ref={passwordRef}
                   id="password"
                   type="password"
+                  placeholder="비밀번호를 입력해주세요."
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
@@ -165,6 +166,7 @@ export default function SignUpPage() {
                   ref={passwordConfirmRef}
                   id="passwordConfirm"
                   type="password"
+                  placeholder="비밀번호를 다시 한 번 입력해주세요."
                   value={passwordConfirm}
                   onChange={(e) => setPasswordConfirm(e.target.value)}
                   required
